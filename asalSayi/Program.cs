@@ -10,25 +10,15 @@ namespace asalSayi
     {
         public static bool asalMi(int sayi)
         {
-            bool durum = false;
-            int kontrol = 0;
+            bool durum = true;
             for (int i = 2; i < sayi; i++)
             {
                 if (sayi % i == 0)
                 {
-                    kontrol = 1;
+                    durum = false;
                     break;
                 }
             }
-            if (kontrol == 1)
-            {
-                durum = false;
-            }
-            else
-            {
-                durum = true;
-            }
-
             return durum;
         }
         static void Main(string[] args)
